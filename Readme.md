@@ -1,5 +1,4 @@
-https://stackoverflow.com/questions/55660134/cant-connect-to-mongo-cloud-mongodb-database-in-golang-on-ubuntu
-https://stackoverflow.com/questions/7486623/mongodb-password-with-in-it
+Note: All rates like discount tax are not percentage and assumed to be in local currency
 
 ## Run Project for linux
 
