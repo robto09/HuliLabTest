@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -15,11 +15,11 @@ import (
 func ConnectDB() *mongo.Database {
 
 	// Set client options
-	clientOptions := options.Client().ApplyURI("mongodb+srv://infostride:pass123word@cluster0-xwgo2.mongodb.net/test?retryWrites=true&w=majority")
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)
-	
+
 
 	if err != nil {
 		log.Fatal(err)
