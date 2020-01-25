@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "23fb1c31-d92c-4e45-92fe-d2da92d7b8d2",
+		"name": "invoices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:7000/api/invoices",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"line\": [{\n            \"product\": \"dhgsdhgjhsd\",\n            \"quantity\": 1,\n            \"price\": 12,\n            \"tax_rate\": 23,\n            \"discount_rate\": 23,\n            \"currency\": \"USD\"\n        }],\n    \"client\":{\n    \t\"id\": \"some id\",\n    \t\"name\": \"some name\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/invoices",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"invoices"
+					]
+				},
+				"description": "Create invoices"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/invoices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/invoices",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"invoices"
+					]
+				},
+				"description": "Get all invoices"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/invoices/5e2b3dea85ddf462495ad126",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"line\": [{\n            \"product\": \"name product\",\n            \"quantity\": 1,\n            \"price\": 12,\n            \"tax_rate\": 23,\n            \"discount_rate\": 23,\n            \"currency\": \"USD\"\n        }],\n    \"client\":{\n    \t\"id\": \"some id\",\n    \t\"name\": \"some name\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/invoices/5e2b3dea85ddf462495ad126",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"invoices",
+						"5e2b3dea85ddf462495ad126"
+					]
+				},
+				"description": "Update invoice"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/invoices/pay",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invoice_id\": \"5e2b3dea85ddf462495ad126\",\n    \"amount\": 94.4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/invoices/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"invoices",
+						"pay"
+					]
+				},
+				"description": "Pay invoice"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/invoices/5e2b37b9a81562ba8d41c23d",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/invoices/5e2b37b9a81562ba8d41c23d",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"invoices",
+						"5e2b37b9a81562ba8d41c23d"
+					]
+				},
+				"description": "Delete Invoice"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/invoices/5e2b3dea85ddf462495ad126",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/invoices/5e2b3dea85ddf462495ad126",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"invoices",
+						"5e2b3dea85ddf462495ad126"
+					]
+				},
+				"description": "Get invoice by id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
